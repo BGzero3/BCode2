@@ -1,0 +1,486 @@
+
+*{
+    font-family: "Montserrat", sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+.heading{
+margin: 2rem;
+padding-top: 6rem;
+display: inline-block;
+font-size: 3.5rem;
+color: #556b2f;
+position: relative;
+}
+
+.subh3{
+    padding-bottom: 2rem;
+    font-size: 2.5rem;
+    color:#a52a2a;
+    font: bold;
+}
+ 
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 100;
+}
+
+ 
+ .logo{
+    font-size: 40px;
+    color: #a52a2a;
+}
+ 
+
+ .logo i{
+    padding: 0 .5rem;
+}
+
+
+ .header .navbar ul{
+    list-style-type: none;
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+}
+
+ .header .navbar ul li{
+     padding: 15px;
+    margin: 0 1.5rem;
+    font-size: 20px;
+}
+
+  .header .navbar ul li a{
+       font-size: 2rem;
+       color: #6a8a32;
+       font-weight:bold;
+       
+}
+
+ .header .navbar ul li a:hover {
+     color: #556b2f;
+}
+
+ .header .fa-bars{
+     color: #556b2f;
+     cursor: pointer;
+     font-size: 3rem;
+     display: none;
+ }
+
+@media (max-width: 768px) {
+
+    html{
+        font-size: 50%;
+    }
+.header .fa-bars{
+    display: block;
+}
+
+    .header .navbar{
+        position: fixed;
+        top: 120%; left: 0;
+        height: auto;
+        width: 100%;
+        background-color: #fff;
+        z-index: 1000;
+        border-top: .1rem solid rgba(0,0,0,.3);
+    }
+    .header .navbar ul{
+        height: 100%;
+        width: 100%;
+        flex-flow: column;
+    }
+    
+    .header .navbar ul li {
+         margin: 1rem 0;
+    }
+
+    .header .navbar ul li a{
+        color: #556b2f;
+        font-size: 2.4rem;
+    }
+
+    .header .fa-times{
+        transform: rotate(180deg);
+    }
+    .header .nav-toggle{
+        top:5.8rem;
+    }
+
+    .bio .row{
+        flex-flow: column-reverse;
+        padding: 0.2rem;
+    }
+
+    .bio .row .image img{
+        width: 100vw;
+    }
+
+}
+
+
+
+
+.home{
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    padding: 0 1rem;
+    position: relative;
+    overflow: hidden !important;
+}
+
+.home .banner{
+    color: #a52a2a !important;
+    font-size: 5rem;
+    padding-top: 10%;
+}
+
+.home .slogan{
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.home .wave{
+    position: absolute;
+    bottom: -.5rem;
+    left: 0;
+    height: 11rem;
+    width: 100%;
+    background: url('http://front-end-noobs.com/jecko/img/wave-top.png');
+    background-size: 100rem 11rem;
+    background-repeat: repeat-x;
+    animation:waves 10s linear infinite;
+}
+
+.home .wave2{
+    animation-direction: reverse;
+    opacity: .2;
+}
+
+.home .wave3{
+    animation-duration: 4s;
+    opacity: .5;
+}
+
+@keyframes waves{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 100rem;
+    }
+}
+
+.home .fa-cog{
+    position: absolute;
+    font-size: 30rem;
+    opacity: .22;
+    color: #556b2f;
+    animation: rotate 10s linear infinite;
+}
+
+.home .nut1{
+    top: 10%; left: -15rem;
+}
+
+.home .nut2{
+    bottom:23%; right: -13rem;
+    animation-direction: reverse;
+}
+
+@keyframes rotate{
+    100%{
+    transform: rotate(360deg);
+    }
+}
+
+.bio .heading{
+    padding-top: 10rem;
+}
+
+.bio{
+    min-height: 100vh;
+    width: 100vw;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.bio .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.4rem;
+}
+
+.bio .row .content{
+    text-align: left;
+}
+
+.bio .row .image img{
+    width: 50vw;
+}
+
+.bio .row .content h3{
+    font-size: 3rem;
+}
+
+.para{
+    font-size: 1.8rem;
+    font-weight:300;
+    color: black;
+    padding: 1rem, 0;
+}
+
+.bio::before, .bio::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    opacity: 2;
+    border-radius: 50%;
+}
+
+.bio::before{
+    height: 50rem;
+    width: 50rem;
+    background: #b36c6c;
+    top: -10rem; left: -10rem;
+}
+
+ 
+
+   img {
+       max-width: 100%;
+       height: auto;
+       margin:auto;
+       padding-left: 5%;
+   }
+
+   .imagessrv{
+    max-width: 100%;
+    height: auto;
+    margin:auto;
+    padding-left: 20%;
+   }
+
+   .srvheading{
+    margin: 2rem;
+    padding-top: 6rem;
+    display: inline-block;
+    font-size: 3.5rem;
+    color: #556b2f;
+    position: relative;
+    text-align: center;
+    padding-left:40% ;
+   }
+
+   .service .content p{
+       text-align:left;
+       font-size: 1.5rem;
+       font-weight: bold;
+   }
+
+   .service{
+      width: 100vw;
+      text-align: center; 
+   }
+
+   .service .row{
+       margin: 2rem 0;
+       padding: 0 2rem;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   }
+
+.service .row .image img{
+    width: 70vw;
+    height: 55vh;
+}
+
+.service .row .content{
+    text-align: left;
+    padding: 0 3rem;
+}
+
+.contact .row{
+    flex-flow: column;
+}
+
+.contact .row .image img{
+    width: 90vw;
+}
+
+.contact .row .form-container{
+    width: 100%;
+    padding:0 1.5rem;
+}
+
+.service .row .content h3{
+    font-size: 3rem;
+    font-weight: 300;
+    color: #a52a2a;
+}
+
+.service .row .content p{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+ 
+
+.contact{
+    min-height: 100vh;
+    width: 100vw;
+    text-align: center;
+    padding-top: 4rem;
+    flex-direction: column;
+}
+
+.conheading{
+    margin: 2rem;
+    padding-top: 4rem;
+    display: inline-block;
+    font-size: 3.5rem;
+    color: #556b2f;
+    position: relative;
+    text-align: center; 
+}
+
+.subcon{
+    font-size: 2.5rem;
+    font-weight: 400;
+    padding-bottom: 1rem;  
+}
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ 
+
+ 
+.contact .row .form-container{
+    width: 50%;
+    text-align: left;
+    padding:0 5rem;
+}
+
+.contact .row .form-container .formgroup input, textarea{
+    outline: none;
+    border: none;
+    height:4rem;
+    background:none;
+    border-radius: .5rem;
+    box-shadow: .2rem .2rem .5rem rgba(0,0,0,.2);
+    padding:0 1rem;
+    margin:1rem 0;
+    font-size: 1.6rem;
+}
+
+.contact .row .form-container .inputBox{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact .row .form-container .inputBox input[type="text"]{
+width: 49%;
+}
+
+.formgroup{
+    width: 100%;
+    }
+
+    .formgroup  textarea{
+        width: 100%;
+        height: 20rem;
+        padding:1rem;
+        resize: none;
+        }
+
+        #my-form-button{
+            background-color:crimson;
+            color:  #fff;
+            cursor: pointer;
+            height: 4rem;
+            width: 10rem;    
+        }
+
+
+         #my-form-button :hover{
+            opacity: .8;
+        }
+
+        #my-form-status{
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            padding: 8px;
+            margin: 0 auto;
+            border-radius: 7px;
+        }
+
+        #my-form-status.success{
+            background-color: rgb(211, 250, 153);
+            animation: status 4s ease forwards;
+        }
+
+        #my-form-status.error{
+            background-color: rgb(250, 129, 92);
+            color: white;
+            animation: status 4s ease forwards;
+        }
+
+        @keyframes status{
+            0%{
+                opacity: 1;
+                pointer-events: all;
+                
+            }
+            90%{
+                opacity: 1;
+                pointer-events: all;
+            }
+            100%{
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+
+
+
+
+
+:root{
+    color: #556b2f;
+}
